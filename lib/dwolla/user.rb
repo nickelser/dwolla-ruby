@@ -55,7 +55,7 @@ module Dwolla
       instances_from_contacts(contacts)
     end
 
-    def send_money_to(destination, amount, pin, type='dwolla', description='', funds_source=nil, facilitator_amount=nil)
+    def send_money_to(destination, amount, pin, type='dwolla', description='', facilitator_amount=nil, funds_source=nil)
       transaction = Transaction.new(:origin => self,
                                     :destination => destination,
                                     :destination_type => type,
